@@ -20,6 +20,8 @@ $fullPageTitle = (isset($pageTitle) ? "{$pageTitle} | " : '') .  __('Onramp to L
         <meta property="twitter:description" content="{{ $ogDescription ?? __('Learn everything you need to get hired writing Laravel, quickly and easily.') }}">
         <meta property="twitter:image" content="{{ $ogImage ?? url('/images/twitter_card.png') }}">
 
+        <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,600,700&display=swap" rel="stylesheet">
+
         <link rel="stylesheet" href="{{ mix('css/app.css') }}">
 
         <script>
@@ -33,7 +35,7 @@ $fullPageTitle = (isset($pageTitle) ? "{$pageTitle} | " : '') .  __('Onramp to L
     <body>
         <!-- header -->
         <div id="app">
-            <div class="text-center px-6 py-2 bg-blue-200 border-blue-900 border-b">
+            {{-- <div class="text-center px-6 py-2 bg-blue-200 border-blue-900 border-b">
                 <p class="text-gray-dark">
                     <span class="font-bold uppercase">NOTE:</span> This site is under active development, so it's not complete right now. Check out the <a href="{{ route_wlocale('dev') }}" class="font-bold hover:underline">dev page</a> to learn more.
                 </p>
@@ -46,11 +48,14 @@ $fullPageTitle = (isset($pageTitle) ? "{$pageTitle} | " : '') .  __('Onramp to L
                     </a>
                     @include('partials.language-switcher')
                 </div>
+            </header> --}}
+            <header class="w-full bg-white border-indigo-darker border-t-4 p-5">
+                <p>Onramp</p>
             </header>
             <!-- /header -->
 
             <!-- nav -->
-            <nav class="w-full bg-white md:pt-0 px-6 relative z-20 border-t border-b border-gray-light">
+            {{-- <nav class="w-full bg-white md:pt-0 px-6 relative z-20 border-t border-b border-gray-light">
                 <div
                     class="container mx-auto py-2 max-w-4xl md:flex justify-between items-center text-sm md:text-md md:justify-start">
                     <div
@@ -82,7 +87,7 @@ $fullPageTitle = (isset($pageTitle) ? "{$pageTitle} | " : '') .  __('Onramp to L
                         @endguest
                     </div>
                 </div>
-            </nav>
+            </nav> --}}
             <!-- /nav -->
 
             <!-- body -->
