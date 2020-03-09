@@ -32,7 +32,7 @@ $fullPageTitle = (isset($pageTitle) ? "{$pageTitle} | " : '') .  __('Onramp to L
 
         <title>{{ $fullPageTitle }}</title>
     </head>
-    <body>
+    <body class="font-normal font-work-sans text-grey-darkest lg:text-xl">
         <!-- header -->
         <div id="app">
             {{-- <div class="text-center px-6 py-2 bg-blue-200 border-blue-900 border-b">
@@ -96,6 +96,7 @@ $fullPageTitle = (isset($pageTitle) ? "{$pageTitle} | " : '') .  __('Onramp to L
             <!-- /body -->
 
             <!-- footer -->
+<<<<<<< HEAD
             <footer class="w-full bg-white px-6 border-t">
                 <div
                     class="container mx-auto max-w-4xl py-6 flex flex-wrap md:flex-no-wrap justify-between items-end text-sm">
@@ -104,11 +105,18 @@ $fullPageTitle = (isset($pageTitle) ? "{$pageTitle} | " : '') .  __('Onramp to L
                         <a href="{{ route_wlocale('use-of-data') }}">{{ __('Use of Data') }}</a>
                         <a class="ml-4"
                             href="https://github.com/tightenco/onramp">{{ __('Source & Roadmap') }}</a>
+=======
+            <footer class="w-full bg-grey-darker text-white py-10">
+                <div class="container mx-auto px-5 lg:px-12 md:text-xl">
+                    <p>{{ __('From the lovely folks at') }} <a class="font-semibold" href="https://tighten.co/">Tighten.</a></p>
+                    {{-- <div class="text-center md:text-right text-xs">
+                        <a href="https://github.com/tightenco/onramp">{{ __('Source & Roadmap') }}</a>
+>>>>>>> welcome page and footer
                         {{--
                         <a href="#" class="text-black ml-4">Terms &amp; Conditions</a>
                         <a href="#" class="text-black ml-4">Contact Us</a>
-                        --}}
-                    </div>
+                        -- }}
+                    </div> --}}
                 </div>
             </footer>
             <!-- /footer -->

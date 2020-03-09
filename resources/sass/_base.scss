@@ -3,6 +3,18 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
-body {
-    @apply font-work-sans font-normal text-grey-darkest;
+h1 {
+    @apply font-bold text-3xl leading-none max-w-2xl tracking-tighter;
+
+    @screen lg {
+        @apply text-6xl;
+    }
+}
+
+h2 {
+    @apply font-bold text-2xl leading-none;
+
+    @screen lg {
+        @apply text-5xl;
+    }
 }

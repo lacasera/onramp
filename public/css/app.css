@@ -599,6 +599,37 @@ video {
   height: auto;
 }
 
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 1.625rem;
+  line-height: 1;
+  max-width: 42rem;
+  letter-spacing: -0.05em;
+}
+
+@media (min-width: 1024px) {
+  h1 {
+    font-size: 3.5rem;
+  }
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+@media (min-width: 1024px) {
+  h2 {
+    font-size: 3rem;
+  }
+}
+
 .container {
   width: 100%;
 }
@@ -7431,7 +7462,7 @@ video {
 }
 
 .text-xl {
-  font-size: 1.25rem;
+  font-size: 1.313rem;
 }
 
 .text-2xl {
@@ -7439,11 +7470,11 @@ video {
 }
 
 .text-3xl {
-  font-size: 1.875rem;
+  font-size: 1.625rem;
 }
 
 .text-4xl {
-  font-size: 2.25rem;
+  font-size: 2rem;
 }
 
 .text-5xl {
@@ -7451,7 +7482,7 @@ video {
 }
 
 .text-6xl {
-  font-size: 4rem;
+  font-size: 3.5rem;
 }
 
 .italic {
@@ -7867,19 +7898,7 @@ video {
   z-index: auto;
 }
 
-* {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-body {
-  font-family: Work\ Sans, sans-serif;
-  font-weight: 400;
-  color: #1a202c;
-}
-
 a {
-  color: #2b6cb0;
   text-decoration: none;
 }
 
@@ -14738,7 +14757,7 @@ a:hover {
   }
 
   .sm\:text-xl {
-    font-size: 1.25rem;
+    font-size: 1.313rem;
   }
 
   .sm\:text-2xl {
@@ -14746,11 +14765,11 @@ a:hover {
   }
 
   .sm\:text-3xl {
-    font-size: 1.875rem;
+    font-size: 1.625rem;
   }
 
   .sm\:text-4xl {
-    font-size: 2.25rem;
+    font-size: 2rem;
   }
 
   .sm\:text-5xl {
@@ -14758,7 +14777,7 @@ a:hover {
   }
 
   .sm\:text-6xl {
-    font-size: 4rem;
+    font-size: 3.5rem;
   }
 
   .sm\:italic {
@@ -21980,7 +21999,7 @@ a:hover {
   }
 
   .md\:text-xl {
-    font-size: 1.25rem;
+    font-size: 1.313rem;
   }
 
   .md\:text-2xl {
@@ -21988,11 +22007,11 @@ a:hover {
   }
 
   .md\:text-3xl {
-    font-size: 1.875rem;
+    font-size: 1.625rem;
   }
 
   .md\:text-4xl {
-    font-size: 2.25rem;
+    font-size: 2rem;
   }
 
   .md\:text-5xl {
@@ -22000,7 +22019,7 @@ a:hover {
   }
 
   .md\:text-6xl {
-    font-size: 4rem;
+    font-size: 3.5rem;
   }
 
   .md\:italic {
@@ -29222,7 +29241,7 @@ a:hover {
   }
 
   .lg\:text-xl {
-    font-size: 1.25rem;
+    font-size: 1.313rem;
   }
 
   .lg\:text-2xl {
@@ -29230,11 +29249,11 @@ a:hover {
   }
 
   .lg\:text-3xl {
-    font-size: 1.875rem;
+    font-size: 1.625rem;
   }
 
   .lg\:text-4xl {
-    font-size: 2.25rem;
+    font-size: 2rem;
   }
 
   .lg\:text-5xl {
@@ -29242,7 +29261,7 @@ a:hover {
   }
 
   .lg\:text-6xl {
-    font-size: 4rem;
+    font-size: 3.5rem;
   }
 
   .lg\:italic {
@@ -36464,7 +36483,7 @@ a:hover {
   }
 
   .xl\:text-xl {
-    font-size: 1.25rem;
+    font-size: 1.313rem;
   }
 
   .xl\:text-2xl {
@@ -36472,11 +36491,11 @@ a:hover {
   }
 
   .xl\:text-3xl {
-    font-size: 1.875rem;
+    font-size: 1.625rem;
   }
 
   .xl\:text-4xl {
-    font-size: 2.25rem;
+    font-size: 2rem;
   }
 
   .xl\:text-5xl {
@@ -36484,7 +36503,7 @@ a:hover {
   }
 
   .xl\:text-6xl {
-    font-size: 4rem;
+    font-size: 3.5rem;
   }
 
   .xl\:italic {
