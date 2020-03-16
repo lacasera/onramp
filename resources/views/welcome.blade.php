@@ -8,7 +8,7 @@
                 {{ __('Providing an easy entrance to Laravel for new developers') }}
             </h1>
 
-            <a class="inline-block text-white font-semibold leading-tight hover:no-underline bg-blue-violet rounded px-6 py-3 mt-4 lg:mt-10 lg:text-xl lg:px-10"
+            <a class="inline-block rounded mt-4 px-6 py-3 font-semibold leading-tight bg-blue-violet text-white duration-150 transition ease-in-out hover:bg-indigo-600 hover:no-underline lg:mt-10 lg:px-10 lg:text-xl"
                 href="#">Learn more</a>
         </div>
     </div>
@@ -105,7 +105,7 @@
 
             <h2 class="mt-10 lg:mt-20">Let's do it!</h2>
 
-            <a class="inline-block text-blue-violet font-semibold leading-tight hover:no-underline bg-white rounded px-6 py-3 mt-6 lg:text-xl"
+            <a class="inline-block rounded mt-6 px-6 py-3 font-semibold leading-tight bg-white text-blue-violet hover:text-indigo-600 hover:no-underline lg:text-xl"
                 href="{{ route_wlocale('modules.index') }}">OK, let's learn</a>
         </div>
     </div>

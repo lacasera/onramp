@@ -32,7 +32,7 @@ $fullPageTitle = (isset($pageTitle) ? "{$pageTitle} | " : '') .  __('Onramp to L
 
         <title>{{ $fullPageTitle }}</title>
     </head>
-    <body class="font-normal font-work-sans text-grey-900 lg:text-xl">
+    <body class=" min-w-xs font-normal font-work-sans text-grey-900 lg:text-xl">
         <!-- header -->
         <div id="app">
             {{-- <div class="text-center px-6 py-2 bg-blue-200 border-blue-900 border-b">
@@ -116,6 +116,7 @@ $fullPageTitle = (isset($pageTitle) ? "{$pageTitle} | " : '') .  __('Onramp to L
             @endif
         </div>
         @routes
+        <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine-ie11.js" defer></script>
         <script src="{{ mix('js/app.js') }}"></script>
     </body>
 </html>

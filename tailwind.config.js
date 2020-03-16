@@ -6,6 +6,9 @@ module.exports = {
                 'blue-violet': '#4c50bf',
                 'havelock-blue': '#5967d8',
                 'cornflower-blue': '#657eea',
+                'east-bay': '#4a5569',
+
+                'regent-grey': '#7b8ba2',
 
                 // 'grey-darkest': '#1a202c', gray-900
                 // 'grey': '#a0aec0', gray-500
@@ -21,6 +24,7 @@ module.exports = {
             },
 
             fontSize: {
+                'none': '0',
                 'xl': '1.313rem',
                 '3xl': '1.625rem',
                 '4xl': '2rem',
@@ -28,7 +32,12 @@ module.exports = {
                 '6xl': '3.5rem',
             },
 
+            minWidth: {
+                'xs': '20rem',
+            },
+
             spacing: {
+                '80': '20rem',
                 '1/2': '50%',
                 '1/3': '33.333333%',
                 '2/3': '66.666667%',
@@ -55,7 +64,7 @@ module.exports = {
                 '9/12': '75%',
                 '10/12': '83.333333%',
                 '11/12': '91.666667%',
-            }
+            },
         },
     },
     variants: {},
