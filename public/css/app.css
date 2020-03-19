@@ -4185,6 +4185,10 @@ video {
   height: 100vh;
 }
 
+.leading-0 {
+  line-height: 0;
+}
+
 .leading-3 {
   line-height: .75rem;
 }
@@ -4239,6 +4243,10 @@ video {
 
 .leading-loose {
   line-height: 2;
+}
+
+.leading-inherit {
+  line-height: inherit;
 }
 
 .list-inside {
@@ -23436,6 +23444,10 @@ a:hover {
     height: 100vh;
   }
 
+  .sm\:leading-0 {
+    line-height: 0;
+  }
+
   .sm\:leading-3 {
     line-height: .75rem;
   }
@@ -23490,6 +23502,10 @@ a:hover {
 
   .sm\:leading-loose {
     line-height: 2;
+  }
+
+  .sm\:leading-inherit {
+    line-height: inherit;
   }
 
   .sm\:list-inside {
@@ -42599,6 +42615,10 @@ a:hover {
     height: 100vh;
   }
 
+  .md\:leading-0 {
+    line-height: 0;
+  }
+
   .md\:leading-3 {
     line-height: .75rem;
   }
@@ -42653,6 +42673,10 @@ a:hover {
 
   .md\:leading-loose {
     line-height: 2;
+  }
+
+  .md\:leading-inherit {
+    line-height: inherit;
   }
 
   .md\:list-inside {
@@ -61762,6 +61786,10 @@ a:hover {
     height: 100vh;
   }
 
+  .lg\:leading-0 {
+    line-height: 0;
+  }
+
   .lg\:leading-3 {
     line-height: .75rem;
   }
@@ -61816,6 +61844,10 @@ a:hover {
 
   .lg\:leading-loose {
     line-height: 2;
+  }
+
+  .lg\:leading-inherit {
+    line-height: inherit;
   }
 
   .lg\:list-inside {
@@ -80925,6 +80957,10 @@ a:hover {
     height: 100vh;
   }
 
+  .xl\:leading-0 {
+    line-height: 0;
+  }
+
   .xl\:leading-3 {
     line-height: .75rem;
   }
@@ -80979,6 +81015,10 @@ a:hover {
 
   .xl\:leading-loose {
     line-height: 2;
+  }
+
+  .xl\:leading-inherit {
+    line-height: inherit;
   }
 
   .xl\:list-inside {

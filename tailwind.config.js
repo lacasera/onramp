@@ -37,6 +37,11 @@ module.exports = {
                 '1/2': '50%',
             },
 
+            lineHeight: {
+                '0': '0',
+                'inherit': 'inherit',
+            },
+
             minWidth: {
                 'xs': '20rem',
             },
