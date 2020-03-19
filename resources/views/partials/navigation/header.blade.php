@@ -53,16 +53,16 @@
 --}}
 <!-- /nav -->
 
-<header class="w-full bg-white border-blue-violet border-t-4 p-5">
-    <div class="flex items-center w-full">
-        <div class="flex-1 inline-flex items-center justify-between">
+<header class="w-full bg-white border-blue-violet border-t-4 p-5 lg:border-t-8">
+    <div class="container flex items-center mx-auto w-full">
+        <div class="flex-1 inline-flex items-center justify-between lg:flex-initial">
             <a class="" href="{{ url_wlocale('/') }}">
-                <img class="h-5" src="/images/logo/onramp.svg" alt="Onramp">
+                <img class="h-5 w-auto md:h-8" src="/images/logo/onramp.svg" alt="Onramp">
             </a>
 
-            <button class="focus:outline-none"
+            <button class="focus:outline-none lg:hidden"
                 @click="openModal('mobileMenu')">
-                <svg class="fill-current text-teal-600 h-5 w-auto duration-150 transition-colors hover:text-teal-700" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 20">
+                <svg class="fill-current text-teal-600 h-5 w-auto duration-150 transition-colors hover:text-teal-700 md:h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 20">
                     <g fill-rule="evenodd">
                         <rect width="25" height="3" rx="1.5"/>
                         <rect y="8" width="25" height="3" rx="1.5"/>
@@ -72,8 +72,52 @@
             </button>
         </div>
 
-        <div class="hidden flex-1">
-            {{-- <div x-show="open">The Menu</div> --}}
+        <div class="hidden flex-1 items-center justify-between pl-12 lg:flex">
+            <div class="flex-1">
+                <nav class="flex items-center">
+                    <a
+                        class="block font-semibold mx-4 text-blue-violet text-xl hover:no-underline"
+                        href="{{ route_wlocale('modules.index') }}">
+                        <span>Learn</span>
+                    </a>
+
+                    <a
+                        class="block font-semibold mx-4 text-blue-violet text-xl hover:no-underline"
+                        href="{{ route_wlocale('glossary')}} ">
+                        <span>Glossary</span>
+                    </a>
+                </nav>
+            </div>
+
+            <div class="flex flex-1 items-center justify-end">
+                @include('partials.language-switcher')
+
+                <div class="flex items-center ml-12">
+                    @guest
+                        <a class="border-2 border-teal-600 flex-1 font-semibold inline-block leading-none mx-2 px-8 py-3 rounded-md text-center text-teal-600 text-lg whitespace-no-wrap hover:no-underline" href="{{ route_wlocale('login') }}">
+                            <span>{{ __('Log in') }}</span>
+                        </a>
+
+                        @if (Route::has('register'))
+                            <a
+                                class="bg-teal-600 border-2 border-teal-600 flex-1 font-semibold inline-block leading-none mx-2 px-8 py-3 rounded-md text-center text-white text-lg whitespace-no-wrap hover:no-underline"
+                                href="{{ route_wlocale('register') }}">
+                                <span>{{ __('Register') }}</span>
+                            </a>
+                        @endif
+                    @else
+                        <p>Member photo</p>
+                        {{-- @todo Remove this --}}
+                        <a href="{{ route_wlocale('logout') }}"
+                        class="text-sm p-3"
+                        onclick="event.preventDefault();
+                        document.getElementById('logout-form').submit();">{{ __('Logout') }}</a>
+                        <form id="logout-form" action="{{ route_wlocale('logout') }}" method="POST" class="hidden">
+                            {{ csrf_field() }}
+                        </form>
+                    @endguest
+                </div>
+            </div>
         </div>
     </div>
 
@@ -97,13 +141,18 @@
         </template>
 
         <template slot="navigation-buttons">
-            <a class="border-2 border-teal-600 flex-1 font-semibold inline-block leading-none mx-2 px-8 py-3 text-center text-teal-600 text-lg hover:no-underline" href="">
-                <span>Log in</span>
-            </a>
+            @guest
+                <a class="border-2 border-teal-600 flex-1 font-semibold inline-block leading-none mx-2 px-8 py-3 text-center text-teal-600 text-lg whitespace-no-wrap hover:no-underline" href="">
+                    <span>Log in</span>
+                </a>
 
-            <a class="bg-teal-600 border-2 border-teal-600 flex-1 font-semibold inline-block leading-none mx-2 px-8 py-3 text-center text-white text-lg hover:no-underline" href="">
-                <span>Register</span>
-            </a>
+                @if (Route::has('register'))
+                <a class="bg-teal-600 border-2 border-teal-600 flex-1 font-semibold inline-block leading-none mx-2 px-8 py-3 text-center text-white text-lg whitespace-no-wrap hover:no-underline" href="">
+                    <span>Register</span>
+                </a>
+                @endif
+            @else
+            @endguest
         </template>
     </modal-mobile-menu>
 </header>

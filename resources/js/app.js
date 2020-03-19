@@ -58,7 +58,7 @@ const app = new Vue({
 
     data: {
         modals: {
-            mobileMenu: true
+            mobileMenu: false,
         },
     },
 

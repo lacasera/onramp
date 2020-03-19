@@ -1947,6 +1947,22 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: {
     language: {
@@ -2074,6 +2090,8 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Modal__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Modal */ "./resources/js/components/Modal.vue");
+//
+//
 //
 //
 //
@@ -38944,86 +38962,120 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "relative text-white z-50" }, [
-    _vm.isOpen
-      ? _c("button", {
-          staticClass: "fixed w-full h-full inset-0 cursor-default",
-          attrs: { tabindex: "-1" },
-          on: {
-            click: function($event) {
-              return _vm.close()
-            }
-          }
-        })
-      : _vm._e(),
-    _vm._v(" "),
-    _c("div", { staticClass: "flex items-center justify-center" }, [
-      _c(
-        "label",
-        {
-          staticClass:
-            "flex items-center relative z-50 block h-8 w-32 bg-white hover:bg-blue-100 text-gray-800 rounded focus:outline-none",
-          attrs: { for: "language-switcher" }
-        },
-        [
-          _c(
-            "span",
-            {
-              staticClass:
-                "flex items-center pl-2 w-8 h-8 rounded-l cursor-pointer"
-            },
-            [_vm._v("🌐")]
-          ),
-          _vm._v(" "),
-          _c(
-            "button",
-            {
-              staticClass: "ml-2 focus:outline-none focus:border-white",
-              attrs: { id: "language-switcher", tabindex: "1" },
-              on: {
-                click: function($event) {
-                  return _vm.toggle()
-                }
+  return _c(
+    "div",
+    { staticClass: "relative z-50" },
+    [
+      _vm.isOpen
+        ? _c("button", {
+            staticClass: "fixed w-full h-full inset-0 cursor-default hidden",
+            attrs: { tabindex: "-1" },
+            on: {
+              click: function($event) {
+                return _vm.close()
               }
-            },
-            [
-              _vm._v(
-                "\n                " + _vm._s(_vm.language) + "\n            "
-              )
-            ]
-          )
-        ]
-      )
-    ]),
-    _vm._v(" "),
-    _vm.isOpen
-      ? _c(
-          "div",
+            }
+          })
+        : _vm._e(),
+      _vm._v(" "),
+      _c("div", { staticClass: "p-6 lg:p-0" }, [
+        _c(
+          "label",
           {
             staticClass:
-              "absolute border border-blue-700 right-0 mt-2 w-32 bg-white rounded shadow-xl"
+              "flex items-center text-blue-violet focus:outline-none",
+            attrs: { for: "language-switcher" }
           },
-          _vm._l(_vm.languages, function(lang, slug) {
-            return _c(
+          [
+            _c(
               "button",
               {
-                key: slug,
                 staticClass:
-                  "block w-full text-left px-4 py-2 text-blue-700 hover:bg-blue-700 hover:text-white",
-                staticStyle: { "text-decoration": "none" },
+                  "font-semibold mr-3 text-md focus:outline-none focus:border-white",
+                attrs: { id: "language-switcher", tabindex: "1" },
                 on: {
                   click: function($event) {
-                    return _vm.choose(slug)
+                    return _vm.toggle()
                   }
                 }
               },
-              [_vm._v(_vm._s(lang))]
+              [
+                _vm._v(
+                  "\n                " + _vm._s(_vm.language) + "\n            "
+                )
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "svg",
+              {
+                staticClass: "h-auto stroke-current text-blue-violet w-3",
+                class: { "transform -scale-y-100": _vm.isOpen },
+                attrs: {
+                  xmlns: "http://www.w3.org/2000/svg",
+                  viewBox: "0 0 16 11"
+                }
+              },
+              [
+                _c("path", {
+                  attrs: {
+                    d: "M2 2l6 6 6-6",
+                    "stroke-width": "3",
+                    fill: "none",
+                    "fill-rule": "evenodd",
+                    "stroke-linecap": "round"
+                  }
+                })
+              ]
             )
-          }),
-          0
+          ]
         )
-      : _vm._e()
-  ])
+      ]),
+      _vm._v(" "),
+      _c(
+        "transition",
+        {
+          attrs: {
+            "enter-active-class": "transition-height duration-500 ease-in-out",
+            "leave-active-class": "transition-height duration-500 ease-in-out",
+            "enter-class": "max-h-0",
+            "enter-to-class": "max-h-1000",
+            "leave-class": "max-h-1000",
+            "leave-to-class": "max-h-0"
+          }
+        },
+        [
+          _vm.isOpen
+            ? _c(
+                "div",
+                {
+                  staticClass:
+                    "bg-white overflow-hidden lg:absolute lg:mt-12 lg:shadow-xl lg:left-0 lg:top-0"
+                },
+                _vm._l(_vm.languages, function(lang, slug) {
+                  return _c(
+                    "button",
+                    {
+                      key: slug,
+                      staticClass:
+                        "block font-normal w-full text-left px-6 py-2 text-blue-violet focus:outline-none hover:bg-indigo-100",
+                      on: {
+                        click: function($event) {
+                          return _vm.choose(slug)
+                        }
+                      }
+                    },
+                    [_vm._v(_vm._s(lang))]
+                  )
+                }),
+                0
+              )
+            : _vm._e()
+        ]
+      )
+    ],
+    1
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -39051,7 +39103,9 @@ var render = function() {
     _vm.show
       ? _c(
           "div",
-          { staticClass: "bg-white fixed h-screen inset-0 z-50" },
+          {
+            staticClass: "bg-white fixed h-screen inset-0 overflow-scroll z-50"
+          },
           [
             _c(
               "button",
@@ -39125,7 +39179,7 @@ var render = function() {
                 "div",
                 {
                   staticClass:
-                    "border-blue-violet border-t-4 flex flex-col h-full justify-between pt-12"
+                    "border-blue-violet border-t-4 flex flex-col h-auto justify-between min-h-screen overflow-scroll pt-12"
                 },
                 [
                   _c(
@@ -39148,7 +39202,7 @@ var render = function() {
                     "div",
                     {
                       staticClass:
-                        "flex items-center justify-between px-4 py-10"
+                        "border-t border-gray-300 flex items-center justify-between mt-4 px-4 py-10"
                     },
                     [_vm._t("navigation-buttons")],
                     2
@@ -52719,7 +52773,7 @@ var app = new Vue({
   },
   data: {
     modals: {
-      mobileMenu: true
+      mobileMenu: false
     }
   },
   methods: {
