@@ -2110,6 +2110,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
@@ -38978,7 +38980,7 @@ var render = function() {
           })
         : _vm._e(),
       _vm._v(" "),
-      _c("div", { staticClass: "p-6 lg:p-0" }, [
+      _c("div", { staticClass: "px-6 py-3 lg:p-0" }, [
         _c(
           "label",
           {
@@ -39182,21 +39184,21 @@ var render = function() {
                     "border-blue-violet border-t-4 flex flex-col h-auto justify-between min-h-screen overflow-scroll pt-12"
                 },
                 [
-                  _c(
-                    "nav",
-                    { staticClass: "mt-2" },
-                    [
-                      _c(
-                        "div",
-                        { staticClass: "border-b border-gray-300" },
-                        [_vm._t("navigation-links")],
-                        2
-                      ),
-                      _vm._v(" "),
-                      _vm._t("navigation-dropdown")
-                    ],
-                    2
-                  ),
+                  _c("nav", { staticClass: "mt-2" }, [
+                    _c(
+                      "div",
+                      { staticClass: "border-b border-gray-300" },
+                      [_vm._t("navigation-links")],
+                      2
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      { staticClass: "py-4" },
+                      [_vm._t("subnavigation-links")],
+                      2
+                    )
+                  ]),
                   _vm._v(" "),
                   _c(
                     "div",

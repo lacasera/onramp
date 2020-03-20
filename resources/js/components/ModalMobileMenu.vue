@@ -7,7 +7,9 @@
                         <slot name="navigation-links"></slot>
                     </div>
 
-                    <slot name="navigation-dropdown"></slot>
+                    <div class="py-4">
+                        <slot name="subnavigation-links"></slot>
+                    </div>
                 </nav>
 
                 <div class="border-t border-gray-300 flex items-center justify-between mt-4 px-4 py-10">

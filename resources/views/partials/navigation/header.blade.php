@@ -106,7 +106,12 @@
                             </a>
                         @endif
                     @else
-                        <p>Member photo</p>
+                        <a class="block bg-teal-600 flex h-12 items-center justify-center rounded-full w-12 hover:no-underline"
+                            href="{{ url_wlocale('home') }}">
+                            <span class="font-semibold leading-none text-white">
+                                {{ Auth::user()->initials() }}
+                            </span>
+                        </a>
                         {{-- @todo Remove this --}}
                         <a href="{{ route_wlocale('logout') }}"
                         class="text-sm p-3"
@@ -136,22 +141,42 @@
             </a>
         </template>
 
-        <template slot="navigation-dropdown">
+        <template slot="subnavigation-links">
+            @auth
+                <a class="block font-semibold px-6 py-3 text-blue-violet text-md hover:no-underline" href="{{ url_wlocale('preferences') }}">
+                    <span>{{ __('Preferences') }}</span>
+                </a>
+            @endauth
+
             @include('partials.language-switcher')
         </template>
 
         <template slot="navigation-buttons">
             @guest
-                <a class="border-2 border-teal-600 flex-1 font-semibold inline-block leading-none mx-2 px-8 py-3 text-center text-teal-600 text-lg whitespace-no-wrap hover:no-underline" href="">
-                    <span>Log in</span>
+                <a class="border-2 border-teal-600 flex-1 font-semibold inline-block leading-none mx-2 px-8 py-3 text-center text-teal-600 text-lg whitespace-no-wrap hover:no-underline" href="{{ route_wlocale('login') }}">
+                    <span>{{ __('Log in') }}</span>
                 </a>
 
                 @if (Route::has('register'))
-                <a class="bg-teal-600 border-2 border-teal-600 flex-1 font-semibold inline-block leading-none mx-2 px-8 py-3 text-center text-white text-lg whitespace-no-wrap hover:no-underline" href="">
-                    <span>Register</span>
+                <a class="bg-teal-600 border-2 border-teal-600 flex-1 font-semibold inline-block leading-none mx-2 px-8 py-3 text-center text-white text-lg whitespace-no-wrap hover:no-underline" href="{{ route_wlocale('register') }}">
+                    <span>{{ __('Register') }}</span>
                 </a>
                 @endif
             @else
+                <a class="border-2 border-teal-600 flex-1 font-semibold inline-block leading-none mx-2 px-8 py-3 text-center text-teal-600 text-lg whitespace-no-wrap hover:no-underline" href="{{ route_wlocale('home') }}">
+                    <span>{{ __('My Modules') }}</span>
+                </a>
+
+                <a href="{{ route_wlocale('logout') }}"
+                    class="bg-teal-600 border-2 border-teal-600 flex-1 font-semibold inline-block leading-none mx-2 px-8 py-3 text-center text-white text-lg whitespace-no-wrap hover:no-underline"
+                    onclick="event.preventDefault();
+                    document.getElementById('logout-form').submit();">
+                    <span>{{ __('Logout') }}</span>
+                </a>
+                <form id="logout-form"
+                    action="{{ route_wlocale('logout') }}" method="POST" class="hidden">
+                    {{ csrf_field() }}
+                </form>
             @endguest
         </template>
     </modal-mobile-menu>

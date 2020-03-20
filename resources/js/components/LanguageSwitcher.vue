@@ -6,7 +6,7 @@
                 class="fixed w-full h-full inset-0 cursor-default hidden">
         </button>
 
-        <div class="p-6 lg:p-0">
+        <div class="px-6 py-3 lg:p-0">
             <label for="language-switcher"
                    class="flex items-center text-blue-violet focus:outline-none">
 
